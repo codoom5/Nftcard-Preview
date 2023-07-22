@@ -1,0 +1,109 @@
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+body{
+ display: grid;
+ place-items: center;
+ font-size: 18px;
+ min-height: 100vh;
+ background:rgb(13,25,54) ;
+}
+.card{
+ width: 18rem;
+ padding: 1rem;
+ border-radius: 0.5rem;
+ display: flex;
+ gap:1.5rem;
+ flex-direction: column;
+ background: rgb(20,37,61);
+}
+.image-container{
+ width: 100%;
+ height: 16rem;
+ border-radius: 0.3rem;
+ cursor: pointer;
+ position: relative;
+ overflow: hidden;
+}
+ .image-container::before {
+  position: absolute;
+  inset: 0;
+  border-color:rgb(0,255,247) ;
+  opacity: 0;
+  content: '';
+  transition: 0.5s opacity;
+ }
+ .image-container:hover::before{
+  opacity: 0.3; 
+ }
+ .image-container .equillibrium{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+ }
+ .image-container .eye-icon{
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s 0.2s opacity;
+ }
+ .image-container:hover .eye-icon{
+  opacity: 1;
+ }
+.content{
+ display: flex;
+ flex-direction: column;
+ gap: 1.2rem
+ ;
+}
+.content > p {
+ color: rgb(139,172,218);
+ font-weight: 300;
+}
+.content h4{
+ color: #fff;
+}
+.price{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: relative; 
+}
+.price::before{
+ content:'';
+ position: absolute;
+ bottom:--0.6rem;
+ width:100%;
+ border-bottom: 1px solid rgb(47,65,91);
+}
+.price p, .price small{
+ display: flex;
+ align-items: center;
+ gap: 0.4rem;
+}
+.price p{
+color: rgb(0,255,247);
+}
+.price small{
+ color: rgb(139,172,218);
+}
+.creator{
+ display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+.creator img{
+ width: 2.5rem;
+}
+.creator p{
+ color: rgb(139,172,218);
+
+}
+.creator p span {
+  color: #fff;
+}
